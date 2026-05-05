@@ -1,47 +1,85 @@
-# A real-time financial data streaming pipeline and visualization platform
+# Real-Time Financial Data Streaming Pipeline
 
-# Introduction
+A real-time data engineering pipeline designed to ingest, process, and visualize financial time-series data such as stock prices using distributed streaming frameworks.
 
-This repo shows my project about real-time stock data pipeline. All the code is written in PYTHON. In this project, I play with various Data Engineering
-frameworks to develop a financial data processing and visualization platform using ***Apache Kafka***, ***Apache Cassandra***, and ***Bokeh***. I used Kafka for realtime stock price and market news streaming, Cassandra for historical and realtime stock data warehousing, and Bokeh for visualization on web browsers. I also wrote a web crawler to scrape companys' financial statements and basic information from Yahoo Finance, and played with various economy data APIs. 
+---
 
+## Overview
 
+This project implements an end-to-end streaming pipeline for financial market data, enabling real-time ingestion, processing, storage, and visualization.
 
-# Architecture
+The system leverages modern data engineering tools to handle continuous data streams efficiently and provide insights through dashboards.
 
-There are currently 3 tabs in the webpage:
+---
 
-- ***Stock: Streaming & Fundamental*** 
-  - Single stock's candlestick plot, basic company & financial information;
-  - Realtime S&P500 price during trading hours (*fake date* during non-trading hours)
-- ***Stock: Comparison***
-  - 2 user-selected stocks' price, and their statstical summay and correlation
-  - 5,10,30-day moving average of adjusted close price
-- ***Economy***
-  - Geomap of various economy data by state
-  - 4 economy indicators nationwide for comparison
-  - The most recent market news 
+## ⚙️ Architecture
 
-&nbsp;
+- **Data Ingestion**: Simulated/streamed stock data using Python producers  
+- **Streaming**: Apache Kafka for real-time data flow  
+- **Processing**: Apache Spark for stream processing and transformation  
+- **Storage**: MySQL for storing processed data  
+- **Visualization**: Grafana dashboards for monitoring and insights  
 
+---
 
-Here is the architecture of the platform.
+## 🔑 Key Features
 
-<img src="https://github.com/ElfatihZiad/realtime-market-data-pipeline/blob/main/images/pipeline.png?raw=true" width="900" />
+- Real-time data ingestion and streaming using Kafka  
+- Stream processing and transformation with Spark  
+- Data validation and anomaly detection  
+- Storage of processed data for querying and analysis  
+- Interactive dashboards using Grafana  
+- Modular pipeline design for scalability  
 
-Please check each tab's screenshot:
+---
 
+## 🛠️ Tech Stack
 
-**Tab 1:**
+- Python  
+- Apache Kafka  
+- Apache Spark  
+- MySQL  
+- Grafana  
+- Docker (for containerization)  
 
-<img src="https://github.com/ElfatihZiad/realtime-market-data-pipeline/blob/main/images/tab1.gif" width="800" />
+---
 
+## ▶️ Running the Project
 
-**Tab 2:**
+1. Start Kafka and required services  
+2. Run data producer scripts to stream financial data  
+3. Start Spark streaming jobs for processing  
+4. Store processed data in MySQL  
+5. Visualize results using Grafana dashboards  
 
-<img src="https://github.com/ElfatihZiad/realtime-market-data-pipeline/blob/main/images/tab2.gif" width="800" />
+---
 
+## 📊 Use Cases
 
-**Tab 3:**
+- Real-time stock price monitoring  
+- Financial data analytics  
+- Streaming data pipeline learning  
+- Anomaly detection in time-series data  
 
-<img src="https://github.com/ElfatihZiad/realtime-market-data-pipeline/blob/main/images/tab3.gif" width="800" />
+---
+
+## 🔮 Future Improvements
+
+- Integration with real stock market APIs  
+- Advanced anomaly detection models  
+- Scalable cloud deployment  
+- Alerting system for price changes  
+
+---
+
+## 👩‍💻 Author
+
+**Manika Rattan**  
+- GitHub: https://github.com/ManikaR26  
+- LinkedIn: https://linkedin.com/in/manika-rattan  
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
